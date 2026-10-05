@@ -6,7 +6,7 @@ The project focuses on creating a smooth, interactive car animation where the ca
 
 ## 🚀 Live Demo
 
-[View Live Demo](YOUR_DEPLOYED_URL)
+[View Live Demo](https://vardvamsifriest.github.io/gsap-implementation/)
 
 ## 📌 Features
 
