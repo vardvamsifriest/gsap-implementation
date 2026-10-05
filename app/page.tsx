@@ -87,7 +87,7 @@ export default function GaspPage() {
       <div ref={heroRef} className="min-h-screen w-full flex flex-col justify-center px-4 md:px-12">
         
         
-      <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-8">
+      <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-18">
           <div className="stat-card">
             <TextCard
               color="yellow"
@@ -116,10 +116,10 @@ export default function GaspPage() {
       <div ref={blanketRef} className="absolute top-0 left-0 h-full w-[95%] bg-slate-800 z-20"/>
 
   
-          <img ref={carRef} src="/car.png" alt="Moving Car"
+          <img ref={carRef} src="/gsap-implementation/car.png" alt="Moving Car"
           className="h-24 md:h-32 w-auto absolute top-1/2 -translate-y-1/2 object-contain z-30 pointer-events-none"/>
           </div>
-          <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-8">
+          <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-8 pt-10">
           <div className="stat-card">
             <TextCard
               color="blue"
