@@ -1,36 +1,88 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Itzfizz Car Scroll Animation
 
-## Getting Started
+A scroll-driven hero section built as part of the Itzfizz internship assignment.
 
-First, run the development server:
+The project focuses on creating a smooth, interactive car animation where the car moves across the hero section as the user scrolls, while the content is revealed progressively.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 🚀 Live Demo
+
+[View Live Demo](YOUR_DEPLOYED_URL)
+
+## 📌 Features
+
+- Scroll-driven car animation
+- GSAP ScrollTrigger integration
+- Pinned hero section
+- Progressive content reveal
+- Animated statistics cards
+- Responsive layout
+- Smooth scroll-based animation
+- Built with a custom visual design inspired by the provided reference
+
+
+
+## 🛠️ Tech Stack
+
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
+- GSAP
+- GSAP ScrollTrigger
+
+
+
+## ⚙️ How It Works
+
+1. The hero section is pinned while the user scrolls.
+2. GSAP ScrollTrigger tracks the scroll progress.
+3. The car moves horizontally across the hero section.
+4. A visual overlay moves along with the car to reveal the heading.
+5. The statistics cards appear progressively during the animation.
+6. Once the animation completes, the user continues scrolling normally.
+
+
+
+## 📂 Project Structure
+
+```text
+app/
+├── components/
+│   └── textcard.tsx
+├── page.tsx
+└── ...
+public/
+└── car.png
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```
+git clone YOUR_GITHUB_REPO_URL
+cd YOUR_PROJECT_FOLDER
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Install Dependencies
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+Run the Server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Assignment
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project was developed as part of the Itzfizz internship assignment, based on the provided scroll-animation reference. The implementation focuses on recreating the core interaction while using an original visual layout.
+
+Author
+
+Vamsi Vardhan Katuri
+
+GitHub: [https://github.com/vardvamsifriest](https://github.com/vardvamsifriest)
+LinkedIn: [www.linkedin.com/in/vamsi-vardhan-124aba398](http://www.linkedin.com/in/vamsi-vardhan-124aba398)

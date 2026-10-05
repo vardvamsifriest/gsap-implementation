@@ -8,10 +8,11 @@ import { useEffect, useRef } from "react"
 gsap.registerPlugin(ScrollTrigger)
 
 export default function GaspPage() {
-  const headingRef = useRef<HTMLDivElement>(null)
+
   const carRef = useRef<HTMLImageElement>(null)
   const heroRef = useRef<HTMLDivElement>(null)
-  const textRef = useRef<HTMLParagraphElement>(null)
+  const blanketRef = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
 
     gsap.set(".stat-card", {
@@ -20,16 +21,15 @@ export default function GaspPage() {
     })
   
     
-    gsap.set(textRef.current, {
-      opacity: 0,
+    gsap.set(blanketRef.current, {
+      xPercent: 0,
     })
-  
  
     gsap.set(carRef.current, {
       left: "0%",
       xPercent: -100,
+      yPercent: -50,
     })
-  
     const tl = gsap.timeline({
       scrollTrigger: {
         trigger: heroRef.current,
@@ -49,19 +49,20 @@ export default function GaspPage() {
         xPercent: 0,
         duration: 4,
         ease: "none",
-      }
-    )
-  
-    tl.to(
-      textRef.current,
-      {
-        opacity: 1,
-        duration: 4,
       },
-      "<"
+      0
+    )
+    
+    tl.to(
+      blanketRef.current,
+      {
+        xPercent: 105,
+        duration: 4,
+        ease: "none",
+      },
+      0
     )
   
-    // Cards appear
     tl.to(
       ".stat-card",
       {
@@ -83,10 +84,10 @@ export default function GaspPage() {
   return (
     <div className="bg-slate-300 min-h-[300vh] w-full">
       
-      <div ref={heroRef} className="min-h-screen w-full flex flex-col justify-center px-12">
+      <div ref={heroRef} className="min-h-screen w-full flex flex-col justify-center px-4 md:px-12">
         
         
-        <div className="flex gap-6 items-center justify-end pb-8">
+      <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-8">
           <div className="stat-card">
             <TextCard
               color="yellow"
@@ -105,25 +106,20 @@ export default function GaspPage() {
         </div>
 
         
-        <div
-          ref={headingRef}
-          className="min-h-48 w-full bg-slate-800 flex items-center justify-center relative overflow-hidden rounded-2xl shadow-xl"
-        >
-          <p ref={textRef} className="text-slate-100 text-6xl md:text-8xl font-black tracking-wider z-10">
-          WELCOME TO ITZFIZZ
-          </p>
-          <div>
-          <img
-            ref={carRef}
-            src="/car.png"
-            alt="Moving Car"
-            className="h-24 md:h-32 w-auto absolute bottom-2 object-contain z-20 pointer-events-none"
-          />
-          </div>
-        </div>
+        <div className="min-h-48 w-full bg-slate-800 flex items-center justify-center relative overflow-hidden rounded-2xl shadow-xl">
 
-      
-        <div className="flex gap-6 items-center justify-end pt-8">
+        <p className="text-slate-100 text-4xl sm:text-6xl md:text-8xl font-black tracking-wider z-10">
+            WELCOME TO ITZFIZZ
+        </p>
+
+
+      <div ref={blanketRef} className="absolute top-0 left-0 h-full w-[95%] bg-slate-800 z-20"/>
+
+  
+          <img ref={carRef} src="/car.png" alt="Moving Car"
+          className="h-24 md:h-32 w-auto absolute top-1/2 -translate-y-1/2 object-contain z-30 pointer-events-none"/>
+          </div>
+          <div className="flex flex-wrap gap-4 items-center justify-center md:justify-end pb-8">
           <div className="stat-card">
             <TextCard
               color="blue"
